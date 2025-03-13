@@ -9,10 +9,43 @@
 </head>
 
 <body>
-    <h1><b>Simon Says Game</b></h1>
-    <h2><b>Press any key to start the game</b></h2>
 
+    <div id="game-over-popup" class="popup" style="display: none;">
+        <div class="popup-content">
+            <h3>Game Over!</h3>
+            <p id="game-over-text"></p>
+            <button onclick="closeGameOverPopup()">Close</button>
+        </div>
+    </div>
+
+    <div id="rules-popup" class="popup">
+        <div class="popup-content">
+            <h3>Simon Says Rules</h3>
+            <div id="rules-text"></div>
+            <div class="language-switcher">
+                <button class="bor" onclick="changeLanguage('en')">English</button>
+                <button class="bor" onclick="changeLanguage('hin')">Hinglish</button>
+                <!-- <button class="bor" onclick="changeLanguage('gj')">Gujarati</button> -->
+                <button class="bor" onclick="changeLanguage('ar')">Arabic</button>
+                <button class="bor" onclick="changeLanguage('am')">Armenian</button>
+                <br> <button id="close" onclick="closePopup()">Close</button>
+            </div>
+        </div>
+    </div>
+    <h1><b>Simon Says Game</b></h1>
+    <h2><b>Press start to start the game</b></h2>
+<div class="score-display">
+    <span id="high-score">High Score: 0</span>
+    <span class="trophy">🏆</span>
+</div>
     <div class="btn-container">
+        <div class="control-buttons">
+            <button id="start-btn"  style="border: 2px solid black">Start</button>
+            <button id="quit-btn" style="border: 2px solid black" >Quit</button>
+            <button id="restart-btn" style="border: 2px solid black">Restart</button>
+            <button id="score-btn" style="border: 2px solid black">View High Score</button>
+            <br> <br> <br>
+        </div>
         <div class="line-one">
             <div class="btn red" id="red" type="button">1</div>
             <div class="btn yellow" id="yellow" type="button">2</div>
